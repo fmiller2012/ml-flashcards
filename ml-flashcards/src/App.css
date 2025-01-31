@@ -5,15 +5,26 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/Machine-Learning.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }

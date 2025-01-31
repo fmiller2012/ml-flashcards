@@ -1,8 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import Header from "./components/Header.jsx";
+{/*
+import Flashcard from "./components/Flashcard.jsx";
+import Flashbutton from "./components/Flashbutton.jsx";
+*/}
+import React from "react";
 
+const App = () => {
+  return (
+    <div className = "app">
+      <Header />
+    </div>
+  );
+};
 
 {/*
 function App() {
@@ -34,4 +47,5 @@ function App() {
   )
 }
 */}
-export default App
+
+export default App;
