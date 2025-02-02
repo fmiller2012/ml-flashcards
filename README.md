@@ -2,7 +2,7 @@
 
 Submitted by: **Faraji Miller**
 
-This web app: **This app tests student aptitude over basic machine learning concepts**
+This web app: **This app tests student aptitude over basic machine learning concepts using flashcards.**
 
 Time spent: **10** hours spent in total
 
