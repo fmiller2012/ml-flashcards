@@ -5,10 +5,16 @@ import { useState } from "react";
 
 const Flashcard = ({question, answer, isFlipped, setIsFlipped, color, image}) => {
   return (
-    <div className = "flashcard-container" onClick = {() => setIsFlipped(!isFlipped)}>
-      <div className = "flashcard-background" style={{ backgroundImage: `url(${image})` }}></div>
-      <div className = {`flashcard-overlay ${color}`}></div>
-      <FlashcardText text = {isFlipped ? answer : question} />   
+    <div className={`flashcard-container ${isFlipped ? "flipped" : ""}`} onClick={() => setIsFlipped(!isFlipped)}>
+      <div className="flashcard-inner">
+        <div className="flashcard-background" style={{ backgroundImage: `url(${image})` }}></div>
+        <div className={`flashcard-overlay ${color}`}>
+        <FlashcardText text={question} />
+        </div>
+        <div className={`flashcard-overlay back ${color}`}>
+          <FlashcardText text={answer} />
+        </div>
+      </div>
     </div>
   );
 };

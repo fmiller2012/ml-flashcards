@@ -14,27 +14,75 @@
   margin-bottom: 0px;
   background-size: cover;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  perspective: 1000px; /* Added for 3D effect */
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard-container.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-background, .flashcard-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Added for 3D effect */
+}
+
+.flashcard-overlay.back {
+  transform: rotateY(180deg); /* Added for 3D effect */
+}
+
+
+.flashcard-text {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem; /* Increased font size */
+  font-weight: bold; /* Increased font weight */
+  color: #fff; /* Set text color to white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow */
 }
 
 .flashcard-background {
+  /*
   position: absolute;
   width: 100%;
   height: 100%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 0; /* ✅ Ensures it's behind everything */
-  filter: brightness(0.7); /* ✅ Slightly darkens image */
+  z-index: 0; 
+  filter: brightness(0.7);
+  */
+  z-index: 0; /* Ensures it's behind everything */
+  filter: brightness(0.7); /* Slightly darkens image */ 
+  background-size: cover; /* Ensures image covers the entire flashcard */
+  background-position: center; /* Centers the image */
 }
 
 /* ✅ Add a semi-transparent color overlay */
 .flashcard-overlay {
+  /*
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* ✅ Adjust transparency */
-  z-index: 1; /* Puts overlay behind text */
+  background-color: rgba(255, 255, 255, 0.6); 
+  z-index: 1;  
   opacity: 0.5;
+  */
+  z-index: 1; /* Puts overlay behind text */
+  /*opacity: 0.5;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }
 
 /* ✅ Ensure text is on top */

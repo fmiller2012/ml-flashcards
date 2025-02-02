@@ -1,3 +1,9 @@
 .flashcard-text {
-  font-weight: bold;
+  font-weight: bold; /* Ensures text is bold */
+  font-size: 2rem; /* Increases font size */
+  color: #fff; /* Sets text color to white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow to make text stand out */
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background to the text */
+  padding: 10px; /* Adds padding around the text */
+  border-radius: 5px; /* Adds rounded corners to the text background */
 }
