@@ -8,22 +8,22 @@ import Flashbutton from "./components/Flashbutton.jsx";
 import React from "react";
 
 const flashcardsData = [
-  { question: "What is React?", answer: "A JavaScript library for building user interfaces.", color: "blue", image: "/1r.png" },
-  { question: "What is a component?", answer: "A reusable piece of UI.", color: "blue", image: "/1r.png" },
-  { question: "What is state?", answer: "An object that determines how that component renders & behaves.", color: "red", image: "/naive-bayes.png.webp" },
-  { question: "What is a prop?", answer: "A way to pass data from parent to child components.", color: "red", image: "/naive-bayes.png.webp" },
-  { question: "What is JSX?", answer: "A syntax extension that looks similar to XML or HTML.", color: "orange", image: "/decision-tree.png" },
-  { question: "What is a hook?", answer: "A special function that lets you use state and other React features.", color: "orange", image: "/decision-tree.png" },
-  { question: "What is useState?", answer: "A hook that lets you add state to functional components.", color: "yellow", image: "/covering.png" },
-  { question: "What is useEffect?", answer: "A hook that lets you perform side effects in function components.", color: "yellow", image: "/covering.png" },
-  { question: "What is a virtual DOM?", answer: "A lightweight copy of the actual DOM.", color: "pink", image: "/association-rule.png.webp" },
-  { question: "What is a key in React?", answer: "A unique identifier for elements in a list.", color: "pink", image: "/association-rule.png.webp" },
-  { question: "What is a higher-order component?", answer: "A function that takes a component and returns a new component.", color: "green", image: "/linear-regression.png" },
-  { question: "What is context?", answer: "A way to pass data through the component tree without props.", color: "green", image: "/linear-regression.png" },
-  { question: "What is Redux?", answer: "A state management library for JavaScript apps.", color: "purple", image: "/nearest-neighbor.png" },
-  { question: "What is a reducer?", answer: "A function that determines changes to an application's state.", color: "purple", image: "/nearest-neighbor.png" },
-  { question: "What is middleware?", answer: "A function that runs between dispatching an action and the moment it reaches the reducer.", color: "brown", image: "/clustering.jpeg" },
-  { question: "What is a pure function?", answer: "A function that returns the same result given the same arguments.", color: "brown", image: "/clustering.jpeg" }
+  { question: "What is the name of Machine Learning algorithm that generates a one-level decision tree expressed in the form of a set of rules that all test one particular attribute?", answer: "1R or 1-Rule", color: "blue", image: "/1r.png" },
+  { question: "True or False: 1R is a simple, cheap method that comes up with good rules for characterizing the structure in a dataset?", answer: "True", color: "blue", image: "/1r.png" },
+  { question: "What is the name of Machine Learning algorithm that uses all of the attributes and allows them to make contributions to the decisions that are equally important and independent of one another, given the class?", answer: "Naive Bayes", color: "red", image: "/naive-bayes.png.webp" },
+  { question: "True or False: Naive Bayes gets is name from the naive assumption that the probabilities of its events are independent?", answer: "True", color: "red", image: "/naive-bayes.png.webp" },
+  { question: "What is the name of Machine Learning algorithm that can be expressed recursively typically by selecting an attribute to place at the rot node and making one branch for each possible value?", answer: "Decision Tree", color: "orange", image: "/decision-tree.png" },
+  { question: "True or False: Decision Tree bases its choice on which node to split further up the tree based on the purity of the information that each node provides?", answer: "True", color: "orange", image: "/decision-tree.png" },
+  { question: "What is the name of Machine Learning algorithm(s) that takes a bottom-up approach towards classification by taking each class and seeking a way of covering all instances in it while at the same time excluding instances not in the class?", answer: "Covering Algorithms", color: "yellow", image: "/covering.png" },
+  { question: "True or False: The covering algorithm generates rule-sets?", answer: "True", color: "yellow", image: "/covering.png" },
+  { question: "What is the name of Machine Learning algorithm that forms the super-set of classification rules and can predict the value of more than one attribute?", answer: "Association Rules", color: "pink", image: "/association-rule.png" },
+  { question: "True or False: Association Rules only differ from Classification Rules in that they can discover the structure on multiple sets of variables instead of just the class variable?", answer: "True", color: "pink", image: "/association-rule.png" },
+  { question: "What is the name of Machine Learning algorithm whose outcome or class is numeric, all the attributes are typically numeric, and is expressed as a linear combination of the attributes with predetermined weights?", answer: "Linear Regression", color: "green", image: "/linear-regression.png" },
+  { question: "True or False: Linear Regression has been widely used in statistical appliations for decades?", answer: "True", color: "green", image: "/linear-regression.png" },
+  { question: "What is the name of Machine Learning algorithm that finds which member of the training set is closest to an unknown test instance by calculating the distance from every member of the training set and selecting the smallest efficiently?", answer: "Nearest Neighbors", color: "purple", image: "/nearest-neighbor.png" },
+  { question: "True or False: Nearest Neighbors is an instance-based-learning method that uses the distance function to predict the class instance for what is nearest in its training data?", answer: "True", color: "purple", image: "/nearest-neighbor.png" },
+  { question: "What is the name of Machine Learning algorithm that is applied when there is no class to be predicted but useful when instances need to be divided into natural groups?", answer: "Clustering", color: "brown", image: "/clustering.jpeg" },
+  { question: "True or False: The classic clustering technique is called K-means and is considered unsupervised learning?", answer: "True", color: "brown", image: "/clustering.jpeg" }
 ];
 
 const App = () => {
