@@ -1,0 +1,36 @@
+.button-container {
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  margin-top: 0px
+}
+
+.left-button {
+  background-color: rgba(0, 0, 59, 1);
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.right-button {
+  background-color: rgba(0, 0, 59, 1);
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.left-button:hover {
+  background-color: #000022;
+}
+
+.right-button:hover {
+  background-color: #000022;
+}
