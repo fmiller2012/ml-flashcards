@@ -8,22 +8,22 @@ import Flashbutton from "./components/Flashbutton.jsx";
 import React from "react";
 
 const flashcardsData = [
-  { question: "What is React?", answer: "A JavaScript library for building user interfaces.", color: "blue" },
-  { question: "What is a component?", answer: "A reusable piece of UI.", color: "blue" },
-  { question: "What is state?", answer: "An object that determines how that component renders & behaves.", color: "red" },
-  { question: "What is a prop?", answer: "A way to pass data from parent to child components.", color: "red" },
-  { question: "What is JSX?", answer: "A syntax extension that looks similar to XML or HTML.", color: "orange" },
-  { question: "What is a hook?", answer: "A special function that lets you use state and other React features.", color: "orange" },
-  { question: "What is useState?", answer: "A hook that lets you add state to functional components.", color: "yellow" },
-  { question: "What is useEffect?", answer: "A hook that lets you perform side effects in function components.", color: "yellow" },
-  { question: "What is a virtual DOM?", answer: "A lightweight copy of the actual DOM.", color: "pink" },
-  { question: "What is a key in React?", answer: "A unique identifier for elements in a list.", color: "pink" },
-  { question: "What is a higher-order component?", answer: "A function that takes a component and returns a new component.", color: "green" },
-  { question: "What is context?", answer: "A way to pass data through the component tree without props.", color: "green" },
-  { question: "What is Redux?", answer: "A state management library for JavaScript apps.", color: "purple" },
-  { question: "What is a reducer?", answer: "A function that determines changes to an application's state.", color: "purple" },
-  { question: "What is middleware?", answer: "A function that runs between dispatching an action and the moment it reaches the reducer.", color: "brown" },
-  { question: "What is a pure function?", answer: "A function that returns the same result given the same arguments.", color: "brown" }
+  { question: "What is React?", answer: "A JavaScript library for building user interfaces.", color: "blue", image: "/1r.png" },
+  { question: "What is a component?", answer: "A reusable piece of UI.", color: "blue", image: "/1r.png" },
+  { question: "What is state?", answer: "An object that determines how that component renders & behaves.", color: "red", image: "/naive-bayes.png.webp" },
+  { question: "What is a prop?", answer: "A way to pass data from parent to child components.", color: "red", image: "/naive-bayes.png.webp" },
+  { question: "What is JSX?", answer: "A syntax extension that looks similar to XML or HTML.", color: "orange", image: "/decision-tree.png" },
+  { question: "What is a hook?", answer: "A special function that lets you use state and other React features.", color: "orange", image: "/decision-tree.png" },
+  { question: "What is useState?", answer: "A hook that lets you add state to functional components.", color: "yellow", image: "/covering.png" },
+  { question: "What is useEffect?", answer: "A hook that lets you perform side effects in function components.", color: "yellow", image: "/covering.png" },
+  { question: "What is a virtual DOM?", answer: "A lightweight copy of the actual DOM.", color: "pink", image: "/association-rule.png.webp" },
+  { question: "What is a key in React?", answer: "A unique identifier for elements in a list.", color: "pink", image: "/association-rule.png.webp" },
+  { question: "What is a higher-order component?", answer: "A function that takes a component and returns a new component.", color: "green", image: "/linear-regression.png" },
+  { question: "What is context?", answer: "A way to pass data through the component tree without props.", color: "green", image: "/linear-regression.png" },
+  { question: "What is Redux?", answer: "A state management library for JavaScript apps.", color: "purple", image: "/nearest-neighbor.png" },
+  { question: "What is a reducer?", answer: "A function that determines changes to an application's state.", color: "purple", image: "/nearest-neighbor.png" },
+  { question: "What is middleware?", answer: "A function that runs between dispatching an action and the moment it reaches the reducer.", color: "brown", image: "/clustering.jpeg" },
+  { question: "What is a pure function?", answer: "A function that returns the same result given the same arguments.", color: "brown", image: "/clustering.jpeg" }
 ];
 
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
     <div className = "app">
       <Header />
       <div className = "flash-container">
-        <Flashcard question = {flashcardsData[currentIndex].question} answer = {flashcardsData[currentIndex].answer} isFlipped = {isFlipped} setIsFlipped = {setIsFlipped} color = {flashcardsData[currentIndex].color} />
+        <Flashcard question = {flashcardsData[currentIndex].question} answer = {flashcardsData[currentIndex].answer} isFlipped = {isFlipped} setIsFlipped = {setIsFlipped} color = {flashcardsData[currentIndex].color} image = {flashcardsData[currentIndex].image} />
       </div>
       <div className = "flash-button">
         <Flashbutton shuffleFlashcard = {shuffleFlashcard} />

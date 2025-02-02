@@ -10,39 +10,70 @@
   justify-content:center;
   color: white;
   font-weight: bold;
+  position: relative;
   margin-bottom: 0px;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  background-size: cover;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-.flashcard-container.red {
-  background-color: rgba(255, 0, 0, 0.7);
+.flashcard-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0; /* ✅ Ensures it's behind everything */
+  filter: brightness(0.7); /* ✅ Slightly darkens image */
 }
 
-.flashcard-container.blue {
-  background-color: rgba(0, 0, 255, 0.7);
+/* ✅ Add a semi-transparent color overlay */
+.flashcard-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* ✅ Adjust transparency */
+  z-index: 1; /* Puts overlay behind text */
+  opacity: 0.5;
 }
 
-.flashcard-container.green {
-  background-color: rgba(0, 128, 0, 0.7);
+/* ✅ Ensure text is on top */
+.flashcard-container .flashcard-text {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
 }
 
-.flashcard-container.purple {
-  background-color: rgba(128, 0, 128, 0.7);
+/* ✅ Dynamic background colors */
+.flashcard-overlay.red {
+  background-color: rgba(255, 0, 0, 0.5); /* ✅ Keeps color visible */
 }
 
-.flashcard-container.orange {
-  background-color: rgba(255, 165, 0, 0.7);
+.flashcard-overlay.blue {
+  background-color: rgba(0, 0, 255, 0.5);
 }
 
-.flashcard-container.yellow {
-  background-color: rgba(255, 255, 0, 0.7);
+.flashcard-overlay.green {
+  background-color: rgba(0, 128, 0, 0.5);
 }
 
-.flashcard-container.brown {
-  background-color: rgba(165, 42, 42, 0.7);
+.flashcard-overlay.purple {
+  background-color: rgba(128, 0, 128, 0.5);
 }
 
-.flashcard-container.pink {
-  background-color: rgba(255, 192, 203, 0.7);
+.flashcard-overlay.orange {
+  background-color: rgba(255, 165, 0, 0.5);
+}
+
+.flashcard-overlay.yellow {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+.flashcard-overlay.brown {
+  background-color: rgba(165, 42, 42, 0.5);
+}
+
+.flashcard-overlay.pink {
+  background-color: rgba(255, 192, 203, 0.5);
 }
 
