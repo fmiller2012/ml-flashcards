@@ -9,7 +9,7 @@ const Flashcard = ({question, answer, isFlipped, setIsFlipped, color, image}) =>
   return (
     <div className={`flashcard-container ${isFlipped ? "flipped" : ""}`} onClick={() => setIsFlipped(!isFlipped)}>
       <div className="flashcard-inner">
-        <img src = {`/${image}`} alt = "Flashcard" div className="flashcard-background" ></div>
+        <img src= {`/${image}`} alt = "Flashcard" className="flashcard-background" />
         <div className={`flashcard-overlay ${color}`}>
         <FlashcardText text={question} />
         </div>
